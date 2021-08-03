@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <script>
+        function pulaLinha(){
+            document.write('<br>');
+        }
+
+        function print(frase){
+            document.write(frase)
+            pulaLinha();
+        }
+    </script>
+</head>
+
+<body>
+    1-
+    <script>
+        const frase = "Hello World!"
+        document.write(frase);
+    </script>
+    <br>
+    =============================================================================================================
+    <br>
+    2-
+    <script>
+        function enviar() {
+            let nome = document.querySelector("#texto").value;
+            alert(`Seja bem vindo ${nome}`);
+        }
+    </script>
+    <form>
+        <label>Digite seu nome</label>
+        <input type="text" id="texto" name="texto">
+        <button onclick="enviar()">Enviar</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    3-
+    <script>
+        function confirmar(){
+            let nome = document.getElementById('nome').value;
+            let dataAmericana = document.getElementById('data').value;
+            let dataBrasileira = dataAmericana.split('-').reverse().join('/');
+            alert(`O aniversario do ${nome} é ${dataBrasileira}`);
+        }
+    </script>
+
+    <form>
+        <label>Qual seu nome?</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <label>Data do seu aniversario</label>
+        <input type="date" id="data">
+        <br>
+        <button onclick="confirmar()">Confirmar</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    4-
+    <script>
+        function somar(){
+            const n1 = parseInt(document.getElementById('n1').value);
+            const n2 = parseInt(document.getElementById('n2').value);
+            const adicao = n1 + n2;
+            alert(`A soma entre ${n1} e ${n2} é: ${adicao}`);
+        }
+    </script>
+    <form>
+        <label>Digite um numero</label>
+        <input type="number" id="n1">
+        <br>
+        <label>Digite outro numero</label>
+        <input type="number" id="n2">
+        <br>
+        <button onclick="somar()">Somar</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    <h4>5-Antecessor e sucessor da soma</h4>
+    <script>
+        function somando(){
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const adicao = num1 + num2;
+            alert(`O antecessor de ${adicao} é ${adicao - 1} e o sucessor é ${adicao + 1}`);
+        }
+    </script>
+    
+    <form>
+        <label>Digite um numero</label>
+        <input type="number" id="num1">
+        <br>
+        <label>Digite outro numero</label>
+        <input type="number" id="num2">
+        <br>
+        <button onclick="somando()">Confirmar</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    6-
+    
+    <script>
+        function calcular(){
+            const numero = parseInt(document.getElementById('numero').value);
+            const dobro = numero * 2;
+            const triplo =  numero * 3;
+            const raizQuadrada = (Math.sqrt(numero));
+
+            alert(`Dobro: ${dobro}; Triplo: ${triplo}, Raiz Quadrada: ${raizQuadrada}`);
+        }
+    </script>
+
+    <form>
+        <label>Digite um numero</label>
+        <input type="number" id="numero">
+        <br>
+        <button onclick="calcular()">calcular</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    7-
+
+    <script>
+        function media(){
+            const nota1 = parseFloat(document.getElementById('nota1').value);
+            const nota2 = parseFloat(document.getElementById('nota2').value);
+            const adicao = nota1 + nota2;
+            const media = adicao / 2;
+            alert(`A média das suas notão é: ${media}`);
+        }
+    </script>
+    
+    <form>
+        <label>Digite a nota</label>
+        <input type="text" id="nota1">
+        <br>
+        <label>Digite a outra nota</label>
+        <input type="text" id="nota2">
+        <br>
+        <button onclick="media()">calcular média</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    8-
+    <script>
+        function conversao(){
+            const metros = parseFloat(document.getElementById('metros').value);
+            const cent = metros * 100;
+            const meli = metros * 1000;
+            alert(`Centímetros: ${cent} e melímetros: ${meli}`);
+        }
+    </script>
+    
+    <form>
+        <label>Digite o valor em metros</label>
+        <input type="text" id="metros">
+        <br>
+        <button onclick="conversao()">calcular</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    9-
+    <script>
+        function tabuada(){
+            const mult = parseInt(document.getElementById('multiplo').value);
+            print(`1 x ${mult} = ${mult*1}`);
+            print(`2 x ${mult} = ${mult*2}`);
+            print(`3 x ${mult} = ${mult*3}`);
+            print(`4 x ${mult} = ${mult*4}`);
+            print(`5 x ${mult} = ${mult*5}`);
+            print(`6 x ${mult} = ${mult*6}`);
+            print(`7 x ${mult} = ${mult*7}`);
+            print(`8 x ${mult} = ${mult*8}`);
+            print(`9 x ${mult} = ${mult*9}`);
+            print(`10 x ${mult} = ${mult*10}`);
+        }
+    </script>
+    
+    <form>
+        <label>Digite o numero da tabuada</label>
+        <input type="text" id="multiplo">
+        <br>
+        <button onclick="tabuada()">tabuada</button>
+    </form>
+
+    <br>
+    =============================================================================================================
+    <br>
+    desafio
+
+    <script>
+        function preco(){
+            const km = parseFloat(document.getElementById('km').value);
+            const dias = parseInt(document.getElementById('dias').value);
+            const valorDias = dias * 60;
+            const valorKm = km * 0.15; 
+            alert(`O preço total a pagar é de: R$${valorDias + valorKm}`);
+        }
+    </script>
+    
+    <form>
+        <label>Digite os KM percorridos</label>
+        <input type="text" id="km">
+        <br>
+        <label>Digite os dias alugados</label>
+        <input type="text" id="dias">
+        <br>
+        <button onclick="preco()">calcular total</button>
+    </form>
+    
+    
+</body>
+
+</html>
